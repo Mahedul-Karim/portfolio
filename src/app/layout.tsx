@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,14 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-cover bg-no-repeat bg-center`}
+        className={`${inter.className} bg-cover bg-no-repeat bg-center bg-fixed`}
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/bg.jpg')`,
         }}
       >
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <Header />
+        <main className="">{children}</main>
       </body>
     </html>
   );

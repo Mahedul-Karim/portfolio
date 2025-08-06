@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -46,6 +48,10 @@
 @theme {
   --color-paper: var(--paper);
 
+  --font-fira: "Fira Code", sans-serif;
+
+  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+
   --breakpoint-xs: 400px;
 }
 
@@ -62,15 +68,19 @@
   @apply max-w-7xl w-11/12 mx-auto;
 }
 
-
 @utility text-gradient {
-  background: linear-gradient(90deg, #00BFA5 30%, #26ffd3);
+  background: linear-gradient(90deg, #00bfa5 30%, #26ffd3);
   background-clip: text;
   color: transparent;
 }
 
-@utility text-aurora{
-  background-image: linear-gradient(135deg, #00BFA5 20%, #0072ff 30%,#26ffd3 80%);
+@utility text-aurora {
+  background-image: linear-gradient(
+    135deg,
+    #00bfa5 20%,
+    #0072ff 30%,
+    #26ffd3 80%
+  );
   background-clip: text;
   color: transparent;
   background-size: 200% auto;
@@ -113,26 +123,58 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+.glare-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg,
+      hsla(0, 0%, 0%, 0) 60%,
+      #ffffff 70%,
+      hsla(0, 0%, 0%, 0),
+      hsla(0, 0%, 0%, 0) 100%);
+  transition: 800ms ease;
+  background-size: 250 250, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: -100% -100%, 0 0;
+  z-index: -1;
+}
+
+.glare-hover:hover::before {
+  background-position: 100% 100%, 0 0;
+}
+
 
 @keyframes aurora {
-    0% {
-      background-position: 0% 50%;
-      transform: rotate(-5deg) scale(0.9);
-    }
-    25% {
-      background-position: 50% 100%;
-      transform: rotate(5deg) scale(1.1);
-    }
-    50% {
-      background-position: 100% 50%;
-      transform: rotate(-3deg) scale(0.95);
-    }
-    75% {
-      background-position: 50% 0%;
-      transform: rotate(3deg) scale(1.05);
-    }
-    100% {
-      background-position: 0% 50%;
-      transform: rotate(-5deg) scale(0.9);
-    }
+  0% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);
   }
+  25% {
+    background-position: 50% 100%;
+    transform: rotate(5deg) scale(1.1);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: rotate(-3deg) scale(0.95);
+  }
+  75% {
+    background-position: 50% 0%;
+    transform: rotate(3deg) scale(1.05);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg))
+      translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+  }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg))
+      translateY(calc(var(--radius) * 1px))
+      rotate(calc((var(--angle) * -1deg) - 360deg));
+  }
+}
