@@ -57,7 +57,7 @@ const Nav = ({ onClose = false }: { onClose?: boolean }) => {
                 variant="ghost"
                 className={`relative w-full md:w-auto cursor-pointer ${
                   activeSection === nav.to
-                    ? "text-paper bg-primary md:bg-transparent md:text-secondary hover:text-secondary"
+                    ? "text-paper bg-primary md:bg-transparent md:hover:bg-transparent md:text-secondary hover:text-secondary"
                     : "text-white hover:text-white hover:bg-muted/10"
                 }`}
                 onClick={() => handleScroll(nav.to)}
