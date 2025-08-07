@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
+import Preloader from "@/components/common/Preloader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,8 +28,10 @@ export default function RootLayout({
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/bg.jpg')`,
         }}
       >
-        <Header />
-        <main className="">{children}</main>
+        <Preloader>
+          <Header />
+          <main className="">{children}</main>
+        </Preloader>
       </body>
     </html>
   );
