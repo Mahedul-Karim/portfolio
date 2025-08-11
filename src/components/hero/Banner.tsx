@@ -1,6 +1,5 @@
 import React from "react";
 import { HyperText } from "../common/Hypertext";
-import { FlipText } from "../common/FlipText";
 import ProfileCard from "./ProfileCard";
 import { Download } from "lucide-react";
 import { Button } from "../ui/button";
@@ -17,12 +16,6 @@ const Banner = () => {
               MERN Stack Developer
             </HyperText>
           </h1>
-          <FlipText>
-            I&apos;m Mahedul Karim, a passionate mern stack developer focused on
-            crafting modern, performative and responsive web applications. I
-            specialize in latest web technologies like HTML, CSS, JavaScript,
-            React, Next JS, Typescript, MongoDB, Express JS, Tailwind CSS etc.
-          </FlipText>
           <div className="mt-4">
             <Button className="glare-hover rounded-full hover:bg-primary">
               <Download /> Download Resume

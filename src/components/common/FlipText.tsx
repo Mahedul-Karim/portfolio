@@ -1,9 +1,9 @@
 "use client";
 
-import {  motion, Variants, MotionProps } from "motion/react";
+import { motion, Variants, MotionProps, useInView } from "motion/react";
 
 import { cn } from "@/lib/utils";
-import { ElementType } from "react";
+import { ElementType, useRef } from "react";
 import React from "react";
 
 interface FlipTextProps extends MotionProps {
@@ -30,25 +30,31 @@ export function FlipText({
   variants,
   ...props
 }: FlipTextProps) {
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, { once: true });
+
   const MotionComponent = motion.create(Component);
   const characters = React.Children.toArray(children).join("").split(" ");
 
   return (
-    <p className="flex flex-wrap space-x-1 mt-2 text-sm xs:text-base text-white/60">
-      
-        {characters.map((char, i) => (
-          <MotionComponent
-            key={i}
-            initial="hidden"
-            animate="visible"
-            variants={variants || defaultVariants}
-            transition={{ duration, delay: i * delayMultiple }}
-            className={cn("origin-center", className)}
-            {...props}
-          >
-            {char}
-          </MotionComponent>
-        ))}
+    <p
+      className="flex flex-wrap space-x-1 mt-2 text-sm xs:text-base text-white/60"
+      ref={ref}
+    >
+      {characters.map((char, i) => (
+        <MotionComponent
+          key={i}
+          initial="hidden"
+          animate={isInView ? "visible" : ""}
+          variants={variants || defaultVariants}
+          transition={{ duration, delay: i * delayMultiple }}
+          className={cn("origin-center", className)}
+          {...props}
+        >
+          {char}
+        </MotionComponent>
+      ))}
     </p>
   );
 }

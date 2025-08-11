@@ -1,21 +1,66 @@
-import React from "react";
+"use client";
 
-const Title = ({ text, highlight }: { text: string; highlight: string }) => {
-  const textArray = text.split(new RegExp(`(${highlight})`, "i"));
+import React, { useRef } from "react";
+import { motion, useInView, Variants } from "framer-motion";
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const wordVariants: Variants = {
+  hidden: { opacity: 0, y: 5 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const SectionTitle = ({
+  text,
+  highlight,
+}: {
+  text: string;
+  highlight: string;
+}) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const words = text.split(" ");
 
   return (
-    <h3 className="text-center text-2xl xs:text-[26px] sm:text-[36px] font-bold leading-[1.3] whitespace-pre-wrap text-text-primary">
-      {textArray.map((text, i) =>
-        text?.toLowerCase() === highlight?.toLowerCase() ? (
-          <span className="text-gradient" key={`highlight-${i}`}>
-            {text}
-          </span>
-        ) : (
-          text
-        )
-      )}
-    </h3>
+    <motion.h3
+      ref={ref}
+      className="text-sm uppercase font-bold leading-[1.3] whitespace-pre-wrap text-white flex items-center"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
+      <div className="size-2 bg-secondary rounded-full mr-2 origin-center" />
+      {words.map((word, i) => {
+        const isHighlighted = word
+          .toLowerCase()
+          .includes(highlight.toLowerCase());
+
+        return (
+          <motion.span
+            key={i}
+            variants={wordVariants}
+            className={isHighlighted ? "text-secondary" : ""}
+            style={{ display: "inline-block" }}
+          >
+            {word}{" "}
+          </motion.span>
+        );
+      })}
+    </motion.h3>
   );
 };
 
-export default Title;
+export default SectionTitle;
