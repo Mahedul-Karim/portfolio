@@ -34,7 +34,7 @@ export function FlipText({
   const characters = React.Children.toArray(children).join("").split(" ");
 
   return (
-    <p className="flex flex-wrap space-x-2 mt-2 text-white/60">
+    <p className="flex flex-wrap space-x-1 mt-2 text-sm xs:text-base text-white/60">
       
         {characters.map((char, i) => (
           <MotionComponent

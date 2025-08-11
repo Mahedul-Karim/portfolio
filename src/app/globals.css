@@ -123,15 +123,24 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+.glare-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
 .glare-hover::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(-45deg,
-      hsla(0, 0%, 0%, 0) 60%,
-      #ffffff 70%,
-      hsla(0, 0%, 0%, 0),
-      hsla(0, 0%, 0%, 0) 100%);
+  background: linear-gradient(
+    -45deg,
+    hsla(0, 0%, 0%, 0) 60%,
+    #ffffff 70%,
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0) 100%
+  );
   transition: 800ms ease;
   background-size: 250 250, 100% 100%;
   background-repeat: no-repeat;
@@ -142,7 +151,6 @@
 .glare-hover:hover::before {
   background-position: 100% 100%, 0 0;
 }
-
 
 @keyframes aurora {
   0% {

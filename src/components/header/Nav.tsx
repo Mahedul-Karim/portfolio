@@ -7,11 +7,11 @@ import { Button } from "../ui/button";
 import { SheetClose } from "../ui/sheet";
 
 const sectionIds = [
-  "section-1",
-  "section-2",
-  "section-3",
-  "section-4",
-  "section-5",
+  "section-about",
+  "section-skills",
+  "section-resume",
+  "section-projects",
+  "section-contact",
 ];
 
 const SheetCloseWrap = ({

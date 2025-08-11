@@ -1,22 +1,22 @@
 export const NAV_LINKS = [
   {
     label: "About",
-    to: "section-1",
-  },
-  {
-    label: "Resume",
-    to: "section-2",
+    to: "section-about",
   },
   {
     label: "Skills",
-    to: "section-3",
+    to: "section-skills",
+  },
+  {
+    label: "Resume",
+    to: "section-resume",
   },
   {
     label: "Projects",
-    to: "section-4",
+    to: "section-projects",
   },
   {
     label: "Contact",
-    to: "section-5",
+    to: "section-contact",
   },
 ];
