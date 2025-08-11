@@ -50,7 +50,7 @@
 
   --font-fira: "Fira Code", sans-serif;
 
-  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+  --animate-orbit: orbit calc(20 * 1s) linear infinite;
 
   --breakpoint-xs: 400px;
 }

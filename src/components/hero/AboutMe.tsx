@@ -11,7 +11,7 @@ const AboutMe = () => {
           I&apos;m Mahedul Karim, a passionate mern stack developer focused on
           crafting modern, performative and responsive web applications. I
           specialize in latest web technologies like HTML, CSS, JavaScript,
-          React, Next JS, Typescript, MongoDB, Express JS, Tailwind CSS etc. I have completed full stack level 1 web development course from programming hero.
+          React, Next JS, Typescript, MongoDB, Express JS, Tailwind CSS etc. I have completed full stack level 1 web development course from programming hero. I mostly enjoy creating unique UI&apos;s for web applications and to learn and explore new technologies everyday.
         </FlipText>
       </div>
     </section>
