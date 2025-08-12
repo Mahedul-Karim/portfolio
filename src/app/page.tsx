@@ -1,5 +1,6 @@
 import AboutMe from "@/components/hero/AboutMe";
 import Banner from "@/components/hero/Banner";
+import Resume from "@/components/hero/Resume";
 import Skills from "@/components/hero/Skills";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Banner />
       <AboutMe />
       <Skills />
+      <Resume />
     </>
   );
 }

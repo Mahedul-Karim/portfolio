@@ -14,6 +14,7 @@ interface FlipTextProps extends MotionProps {
   as?: ElementType;
   children: React.ReactNode;
   variants?: Variants;
+  containerStyle?:string;
 }
 
 const defaultVariants: Variants = {
@@ -28,6 +29,7 @@ export function FlipText({
   className,
   as: Component = "span",
   variants,
+  containerStyle="",
   ...props
 }: FlipTextProps) {
   const ref = useRef(null);
@@ -39,7 +41,7 @@ export function FlipText({
 
   return (
     <p
-      className="flex flex-wrap space-x-1 mt-2 text-sm xs:text-base text-white/60"
+      className={`flex flex-wrap space-x-1 mt-2 text-sm xs:text-base text-white/60 ${containerStyle}`}
       ref={ref}
     >
       {characters.map((char, i) => (
