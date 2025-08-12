@@ -10,14 +10,14 @@ const educations = [
     gpa:""
   },
   {
-    degree: "Higher School Certificate Examination",
-    university: "Comilla Board",
+    degree: "Higher Secondary Certificate Examination",
+    university: "Cumilla Board",
     period: "2018-2020",
     gpa: "5.00",
   },
   {
-    degree: "Secondary School Certification Examination",
-    university: "Comilla Board",
+    degree: "Secondary School Certificate Examination",
+    university: "Cumilla Board",
     period: "2016-2018",
     gpa: "4.94",
   },
