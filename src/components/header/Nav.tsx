@@ -7,6 +7,7 @@ import { Button } from "../ui/button";
 import { SheetClose } from "../ui/sheet";
 
 const sectionIds = [
+  "section-banner",
   "section-about",
   "section-skills",
   "section-resume",

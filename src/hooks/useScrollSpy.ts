@@ -17,8 +17,6 @@ export const useScrollSpy = ({ ids = [] }: Params) => {
 
           if (entry.isIntersecting) {
             setActiveId(id);
-          } else {
-            setActiveId("");
           }
         });
       },
