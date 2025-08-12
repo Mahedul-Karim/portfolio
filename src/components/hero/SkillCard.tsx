@@ -11,7 +11,10 @@ const SkillCard = ({
   icon,
 }: {
   type: string;
-  skills: string[];
+  skills: {
+    img: string;
+    isInverted: boolean;
+  }[];
   icon: React.ReactElement;
 }) => {
   return (
@@ -26,7 +29,14 @@ const SkillCard = ({
         <div className="h-[200px] relative flex flex-col items-center justify-center">
           <OrbitingCircles radius={100}>
             {skills?.map((skill, i) => (
-              <Image src={skill} key={i} alt="" width={30} height={30} />
+              <Image
+                src={skill.img}
+                key={i}
+                alt=""
+                width={30}
+                height={30}
+                className={`${skill.isInverted && "invert"}`}
+              />
             ))}
           </OrbitingCircles>
         </div>
