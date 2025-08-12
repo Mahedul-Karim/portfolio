@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import AboutMe from "@/components/hero/AboutMe";
 import Banner from "@/components/hero/Banner";
 import Resume from "@/components/hero/Resume";
@@ -12,6 +13,7 @@ export default function Home() {
       <Skills />
       <Resume />
       <Projects />
+      <Contact />
     </>
   );
 }
