@@ -11,7 +11,7 @@ const Education = ({
   }[];
 }) => {
   return (
-    <div className="flex flex-col gap-6 mt-4">
+    <div className="flex flex-col gap-6 mt-8">
       {educations?.length > 0 &&
         educations?.map((edu, i) => (
           <div key={i} className="grid grid-cols-[16px_1fr] gap-6 text-white">
