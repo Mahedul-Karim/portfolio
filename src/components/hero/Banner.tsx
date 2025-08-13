@@ -13,7 +13,7 @@ const Banner = () => {
           <h1 className="text-4xl xs:text-5xl text-white font-extrabold max-w-[500px] leading-[1.1]">
             <span className="text-lg mb-2">Hi! I&apos;m Mahedul Karim a</span>
             <br />
-            <HyperText startOnView animateOnHover={false}>
+            <HyperText startOnView animateOnHover>
               MERN Stack Developer
             </HyperText>
           </h1>
