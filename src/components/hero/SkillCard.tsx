@@ -5,11 +5,13 @@ import { OrbitingCircles } from "../common/OrbittingCircles";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import SpotlightCard from "../common/Spotlight";
+import ScrollReveal from "../common/ScrollReveal";
 
 const SkillCard = ({
   type,
   skills = [],
   icon,
+  index
 }: {
   type: string;
   skills: {
@@ -17,34 +19,37 @@ const SkillCard = ({
     isInverted: boolean;
   }[];
   icon: React.ReactElement;
+  index:number;
 }) => {
   return (
-    <SpotlightCard>
-      <Card className="shadow-none bg-glass border-border border">
-        <CardHeader>
-          <CardTitle className="text-white flex items-center gap-2">
-            <div className="bg-white/20 p-2 rounded-md">{icon}</div>
-            {type}
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="h-[200px] relative flex flex-col items-center justify-center">
-            <OrbitingCircles radius={100}>
-              {skills?.map((skill, i) => (
-                <Image
-                  src={skill.img}
-                  key={i}
-                  alt=""
-                  width={30}
-                  height={30}
-                  className={`${skill.isInverted && "invert"}`}
-                />
-              ))}
-            </OrbitingCircles>
-          </div>
-        </CardContent>
-      </Card>
-    </SpotlightCard>
+    <ScrollReveal index={index}>
+      <SpotlightCard>
+        <Card className="shadow-none bg-glass border-border border">
+          <CardHeader>
+            <CardTitle className="text-white flex items-center gap-2">
+              <div className="bg-white/20 p-2 rounded-md">{icon}</div>
+              {type}
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="h-[200px] relative flex flex-col items-center justify-center">
+              <OrbitingCircles radius={100}>
+                {skills?.map((skill, i) => (
+                  <Image
+                    src={skill.img}
+                    key={i}
+                    alt=""
+                    width={30}
+                    height={30}
+                    className={`${skill.isInverted ? "invert" : ""}`}
+                  />
+                ))}
+              </OrbitingCircles>
+            </div>
+          </CardContent>
+        </Card>
+      </SpotlightCard>
+    </ScrollReveal>
   );
 };
 

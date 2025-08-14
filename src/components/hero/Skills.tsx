@@ -9,6 +9,7 @@ const Skills = () => {
       <SectionTitle text="My Skills" highlight="Skills" />
       <div className="mt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4">
         <SkillCard
+          index={0}
           type="Frontend Development"
           skills={[
             {
@@ -20,7 +21,11 @@ const Skills = () => {
               isInverted: false,
             },
             {
-              img: "/js.png",
+              img: "/javascript.png",
+              isInverted: false,
+            },
+            {
+              img: "/tailwind.png",
               isInverted: false,
             },
             {
@@ -35,10 +40,11 @@ const Skills = () => {
           icon={<Globe />}
         />
         <SkillCard
+          index={1}
           type="Backend Development"
           skills={[
             {
-              img: "/express.png",
+              img: "/expressjs.png",
               isInverted: true,
             },
             {
@@ -50,13 +56,14 @@ const Skills = () => {
               isInverted: false,
             },
             {
-              img: "/typescript.png",
+              img: "/ts.png",
               isInverted: false,
             },
           ]}
           icon={<Server />}
         />
         <SkillCard
+          index={2}
           type="Tools"
           skills={[
             {
