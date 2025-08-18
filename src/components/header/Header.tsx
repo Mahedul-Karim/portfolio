@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
-import NavActions from "./NavActions";
+// import NavActions from "./NavActions";
 
 const Header = () => {
   return (
@@ -16,9 +16,9 @@ const Header = () => {
           </div>
           <div>
             <MobileNav />
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <NavActions />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

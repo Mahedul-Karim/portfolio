@@ -9,7 +9,7 @@ import {
   SheetFooter
 } from "@/components/ui/sheet";
 import Nav from "./Nav";
-import NavActions from "./NavActions";
+// import NavActions from "./NavActions";
 
 const MobileNav = () => {
   return (
@@ -34,7 +34,7 @@ const MobileNav = () => {
             <Nav onClose />
           </div>
           <SheetFooter>
-            <NavActions onClose />
+            {/* <NavActions onClose /> */}
           </SheetFooter>
         </SheetContent>
       </Sheet>
