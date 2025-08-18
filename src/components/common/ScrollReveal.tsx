@@ -6,9 +6,11 @@ import React, { useRef } from "react";
 const ScrollReveal = ({
   children,
   index,
+  haveDelay = true,
 }: {
   children: React.ReactNode;
   index: number;
+  haveDelay?: boolean;
 }) => {
   const ref = useRef(null);
 
@@ -20,7 +22,7 @@ const ScrollReveal = ({
       initial={{ y: 20, opacity: 0 }}
       animate={isInView ? { y: 0, opacity: 1 } : {}}
       transition={{
-        delay: index * 0.3,
+        delay: haveDelay ? index * 0.2 : 0,
         duration: 0.5,
       }}
     >

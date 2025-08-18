@@ -6,13 +6,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-  SheetFooter,
-  SheetClose,
+  SheetFooter
 } from "@/components/ui/sheet";
-import { Button } from "../ui/button";
-import Link from "next/link";
-import { Lock } from "lucide-react";
 import Nav from "./Nav";
+import NavActions from "./NavActions";
 
 const MobileNav = () => {
   return (
@@ -37,18 +34,7 @@ const MobileNav = () => {
             <Nav onClose />
           </div>
           <SheetFooter>
-            <SheetClose asChild>
-              <Button
-                size={"lg"}
-                className="rounded-full glare-hover relative hover:bg-primary overflow-clip z-[1] cursor-pointer active:scale-[0.9]"
-                asChild
-              >
-                <Link href={"/admin-login"}>
-                  <Lock />
-                  Login
-                </Link>
-              </Button>
-            </SheetClose>
+            <NavActions onClose />
           </SheetFooter>
         </SheetContent>
       </Sheet>

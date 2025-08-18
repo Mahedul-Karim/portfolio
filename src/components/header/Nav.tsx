@@ -2,9 +2,9 @@
 
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { NAV_LINKS } from "@/lib/data";
-import React, { Fragment } from "react";
+import React from "react";
 import { Button } from "../ui/button";
-import { SheetClose } from "../ui/sheet";
+import SheetCloseWrap from "../common/SheetCloseWrap";
 
 const sectionIds = [
   "section-banner",
@@ -15,23 +15,7 @@ const sectionIds = [
   "section-contact",
 ];
 
-const SheetCloseWrap = ({
-  onClose,
-  children,
-}: {
-  onClose: boolean;
-  children: React.ReactNode;
-}) => {
-  return (
-    <>
-      {onClose ? (
-        <SheetClose asChild>{children}</SheetClose>
-      ) : (
-        <Fragment>{children}</Fragment>
-      )}
-    </>
-  );
-};
+
 
 const Nav = ({ onClose = false }: { onClose?: boolean }) => {
   const activeSection = useScrollSpy({ ids: sectionIds });

@@ -1,9 +1,7 @@
 import React from "react";
-// import { Button } from "../ui/button";
-// import { Lock } from "lucide-react";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
-// import Link from "next/link";
+import NavActions from "./NavActions";
 
 const Header = () => {
   return (
@@ -12,24 +10,15 @@ const Header = () => {
         <div>
           <span className="text-secondary text-2xl font-semibold font-fira tracking-wide">{`<MK />`}</span>
         </div>
-        <div>
+        <div className="flex items-center gap-8">
           <div className="hidden md:block">
             <Nav />
           </div>
           <div>
             <MobileNav />
-            {/* <div className="hidden md:block">
-              <Button
-                size={"lg"}
-                className="rounded-full glare-hover relative hover:bg-primary overflow-clip z-[1] cursor-pointer active:scale-[0.9]"
-                asChild
-              >
-                <Link href={"/admin-login"}>
-                  <Lock />
-                  Login
-                </Link>
-              </Button>
-            </div> */}
+            <div className="hidden md:block">
+              <NavActions />
+            </div>
           </div>
         </div>
       </section>
