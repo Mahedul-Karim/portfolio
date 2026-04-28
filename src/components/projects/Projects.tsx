@@ -18,13 +18,13 @@ const projects = [
     githubLink: "https://github.com/Mahedul-Karim/copy-forge",
   },
   {
-    name: "Tourigo",
+    name: "Tripnest",
     image: "/project-2.PNG",
     description:
-      "Tourigo is a tour booking app where user can book their desired tour",
+      "Tripnest is a tour booking app where user can book their desired tour",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Next JS"],
-    liveLink: "https://tourigo.vercel.app/",
-    githubLink: "https://github.com/Mahedul-Karim/tourigo",
+    liveLink: "https://tripnest-kappa.vercel.app/",
+    githubLink: "https://github.com/Mahedul-Karim/tripnest",
   },
   {
     name: "EcoNest",

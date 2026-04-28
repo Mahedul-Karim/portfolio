@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <Preloader>
           <Header />
-          <main className="">{children}</main>
+          <main>{children}</main>
         </Preloader>
       </body>
     </html>
