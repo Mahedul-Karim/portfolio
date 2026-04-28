@@ -10,7 +10,7 @@ const Banner = () => {
     <section className="min-h-dvh flex items-center" id="section-banner">
       <div className="text-white l-container grid md:grid-cols-[0.6fr_0.4fr] gap-4 pb-20 pt-30">
         <div className="flex flex-col justify-center">
-          <h1 className="text-4xl xs:text-6xl text-white font-extrabold  leading-[1.1]">
+          <h1 className="text-4xl xs:text-5xl lg:text-6xl text-white font-extrabold  leading-[1.1]">
             <span className="text-xl sm:text-2xl mb-2">Hi, 👋! This is </span>
             <br />
             <HyperText startOnView animateOnHover>
@@ -22,6 +22,7 @@ const Banner = () => {
               A passionate fullstack web developer who loves create exceptional web
               solutions
             </FlipText>
+            
           </div>
           <div className="mt-4">
             <Button className="glare-hover rounded-full hover:bg-primary">

@@ -65,7 +65,7 @@
 }
 
 @utility l-container {
-  @apply max-w-7xl w-11/12 mx-auto;
+  @apply max-w-5xl w-11/12 mx-auto;
 }
 
 @utility text-gradient {

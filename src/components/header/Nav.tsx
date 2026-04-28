@@ -15,8 +15,6 @@ const sectionIds = [
   "section-contact",
 ];
 
-
-
 const Nav = ({ onClose = false }: { onClose?: boolean }) => {
   const activeSection = useScrollSpy({ ids: sectionIds });
 
