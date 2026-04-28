@@ -8,17 +8,17 @@ import { FlipText } from "../common/FlipText";
 const Banner = () => {
   return (
     <section className="min-h-dvh flex items-center" id="section-banner">
-      <div className="text-white l-container grid md:grid-cols-[0.6fr_0.4fr] gap-4 py-20">
+      <div className="text-white l-container grid md:grid-cols-[0.6fr_0.4fr] gap-4 pb-20 pt-30">
         <div className="flex flex-col justify-center">
-          <h1 className="text-4xl xs:text-5xl text-white font-extrabold max-w-[500px] leading-[1.1]">
-            <span className="text-lg mb-2">Hi, 👋! I&apos;m </span>
+          <h1 className="text-4xl xs:text-6xl text-white font-extrabold  leading-[1.1]">
+            <span className="text-xl sm:text-2xl mb-2">Hi, 👋! This is </span>
             <br />
             <HyperText startOnView animateOnHover>
               Mahedul Karim
             </HyperText>
           </h1>
           <div className="max-w-[450px]">
-            <FlipText>
+            <FlipText className="text-base sm:text-lg">
               A passionate fullstack web developer who loves create exceptional web
               solutions
             </FlipText>
