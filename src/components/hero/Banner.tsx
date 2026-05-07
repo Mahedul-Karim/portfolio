@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { HyperText } from "../common/Hypertext";
 import ProfileCard from "./ProfileCard";
@@ -19,10 +21,9 @@ const Banner = () => {
           </h1>
           <div className="max-w-[450px]">
             <FlipText className="text-base sm:text-lg">
-              A passionate fullstack web developer who loves create exceptional web
-              solutions
+              A passionate fullstack web developer who loves create exceptional
+              web solutions
             </FlipText>
-            
           </div>
           <div className="mt-4">
             <Button className="glare-hover rounded-full hover:bg-primary">
