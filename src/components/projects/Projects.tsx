@@ -45,7 +45,7 @@ const Projects = () => {
         <div className="grid xs:grid-cols-2 gap-2  sm:grid-cols-1 sm:gap-8">
           {projects.map((project, index) => (
             <ScrollReveal key={index} index={index}>
-              <Card className="shadow-none py-0 bg-transparent">
+              <Card className="shadow-none py-0 bg-transparent border-none">
                 <CardContent
                   className={`px-0 flex h-full justify-between sm:justify-normal flex-col-reverse sm:flex-row gap-2 md:gap-4 lg:gap-8 ${
                     (index + 1) % 2 === 0 && "sm:flex-row-reverse"

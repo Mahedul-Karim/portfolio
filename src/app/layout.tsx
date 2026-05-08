@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Preloader from "@/components/common/Preloader";
-import MagicRings from "@/components/MagicRings";
+import ColorBends from "@/components/ColorBends";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,28 +39,22 @@ export default function RootLayout({
             zIndex: -1,
           }}
         >
-          <MagicRings
-            color="#00bfa5"
-            colorTwo="#0072ff"
-            ringCount={6}
-            speed={1}
-            attenuation={10}
-            lineThickness={2}
-            baseRadius={0.35}
-            radiusStep={0.1}
-            scaleRate={0.1}
-            opacity={0.8}
-            blur={0}
-            noiseAmount={0.1}
-            rotation={0}
-            ringGap={1.5}
-            fadeIn={0.7}
-            fadeOut={0.5}
-            followMouse={false}
-            mouseInfluence={0.2}
-            hoverScale={1.2}
-            parallax={0.05}
-            clickBurst={false}
+          <ColorBends
+            colors={["#0072ff"]}
+            rotation={90}
+            speed={0.2}
+            scale={1}
+            frequency={1}
+            warpStrength={1}
+            mouseInfluence={1}
+            noise={0.15}
+            parallax={0.5}
+            iterations={1}
+            intensity={1.5}
+            bandWidth={6}
+            transparent
+            autoRotate={0}
+            className="opacity-80"
           />
         </div>
         <Preloader>
