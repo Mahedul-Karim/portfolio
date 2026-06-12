@@ -4,7 +4,7 @@ import { FlipText } from "../common/FlipText";
 
 const AboutMe = () => {
   return (
-    <section id="section-about" className="l-container py-8 md:py-16">
+    <section id="section-about" className="l-container py-8">
       <SectionTitle text="About Me" highlight="Me" />
       <div className="bg-glass border border-border rounded-2xl p-4 mt-4">
         <FlipText>

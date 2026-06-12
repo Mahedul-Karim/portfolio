@@ -10,7 +10,8 @@ const Education = ({
     degree: string;
     university: string;
     period: string;
-    gpa: string;
+    gpa?: string;
+    cgpa?: string;
   }[];
 }) => {
   return (
@@ -33,7 +34,7 @@ const Education = ({
                       {edu.degree}
                     </h2>
                     <p className="text-sm xs:text-base text-white/60">
-                      {edu.university}
+                      {edu.university} | {edu?.gpa ? "GPA:" : "CGPA:"} {edu?.gpa || edu?.cgpa}
                     </p>
                   </div>
                   <div>

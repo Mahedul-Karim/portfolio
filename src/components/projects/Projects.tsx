@@ -9,19 +9,19 @@ import ScrollReveal from "../common/ScrollReveal";
 
 const projects = [
   {
-    name: "CopyForge - AI SaaS",
+    name: "CopyForge - AI SaaS Content Management Platform",
     image: "/project-1.PNG",
     description:
-      "CopyForge is a SaaS platform where a user can generate contents with AI according their needs",
+      "CopyForge is an AI-powered content automation platform that orchestrates multi-step generation workflows (blog writing, SEO metadata, LinkedIn posts, and Twitter ) using Google Gemini API, with structured output pipelines, reusable prompt modules, and MongoDB-based persistence.",
     technologies: ["React", "Tailwind CSS", "Express JS", "MongoDB"],
     liveLink: "https://copy-forge.vercel.app/",
     githubLink: "https://github.com/Mahedul-Karim/copy-forge",
   },
   {
-    name: "Tripnest",
+    name: "TripNest — Tour Management Platform",
     image: "/project-2.PNG",
     description:
-      "Tripnest is a tour booking app where user can book their desired tour",
+      "TripNest is a full-featured tour management platform designed to help users plan, book, and experience seamless journeys across the globe. It connects users, vendors, and admins within a structured ecosystem that simplifies tour discovery, booking, and management.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Next JS"],
     liveLink: "https://tripnest-kappa.vercel.app/",
     githubLink: "https://github.com/Mahedul-Karim/tripnest",
@@ -39,7 +39,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="section-projects" className="l-container py-8 md:py-16">
+    <section id="section-projects" className="l-container py-8">
       <SectionTitle text="My Projects" highlight="Projects" />
       <div className="my-4">
         <div className="grid xs:grid-cols-2 gap-2  sm:grid-cols-1 sm:gap-8">
@@ -106,7 +106,7 @@ const Projects = () => {
                       </Button>
                     </div>
                   </div>
-                  <div className="sm:w-[50%] lg:w-[450px] rounded-2xl">
+                  <div className="sm:w-[50%] lg:w-[450px] rounded-2xl shrink-0">
                     <img
                       src={project.image}
                       alt={project.name}
