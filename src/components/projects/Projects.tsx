@@ -18,6 +18,21 @@ const projects = [
     githubLink: "https://github.com/Mahedul-Karim/copy-forge",
   },
   {
+    name: "EduTrack — Learning Management System",
+    image: "/ed_tech.png",
+    description:
+      "EduTrack is a full-stack Learning Management System (LMS) designed for selling and managing online courses, with separate experiences for students and instructors. Students can purchase courses, watch lessons, track their progress, and leave reviews, while instructors can create, edit, and manage their courses. The platform also includes a real-time communication system that allows students and instructors to chat directly using Socket.IO. Stripe is integrated for secure course payments, while search, filtering, pagination, lazy loading are implemented to improve usability and performance.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Express JS",
+      "MongoDB",
+      "React Query, Socket IO, Mongoose",
+    ],
+    liveLink: "https://copy-forge.vercel.app/",
+    githubLink: "https://github.com/Mahedul-Karim/copy-forge",
+  },
+  {
     name: "TripNest — Tour Management Platform",
     image: "/project-2.PNG",
     description:
@@ -27,11 +42,39 @@ const projects = [
     githubLink: "https://github.com/Mahedul-Karim/tripnest",
   },
   {
-    name: "EcoNest",
+    name: "BunkBEE — Hostel Meal Management Platform",
+    image: "/bunkbee.png",
+    description:
+      "BunkBEE is a hostel meal management platform that helps administrators manage meals and students request, purchase, and review them. Admins can create and serve meals, manage users, and monitor meal-related activities, while students can search and filter meals, subscribe to premium packages, view upcoming meals, like meals, and track their transaction history. Stripe is integrated to handle premium package payments.",
+    technologies: [
+      "React",
+      "Axios",
+      "GSAP",
+      "Firebase",
+      "Shadcn UI",
+      "React Hook Form",
+      "Zod",
+      "@tanstack/react-query",
+      "Stripe",
+      "React Infinite Scroll Component",
+    ],
+    liveLink: "https://bunkbee-client.vercel.app/",
+    githubLink: "https://github.com/Mahedul-Karim/bunkbee-client",
+  },
+  {
+    name: "EcoNest — Gardening Community Platform",
     image: "/project-3.png",
     description:
-      "EcoNest is a gardening community platform where people can create their profile and share their gardening tips accross all over the world.",
-    technologies: ["React", "Express Js", "MongoDB"],
+      "EcoNest is a gardening community platform where users can create profiles and share gardening tips with a global community. Users can explore tips shared by others, like useful content, and filter tips based on difficulty level. The platform also features a responsive modern slider, dark and light mode, and scroll-reveal animations to create an engaging user experience.",
+    technologies: [
+      "React",
+      "Mongoose",
+      "ShadCN UI",
+      "SwiperJS",
+      "React Awesome Reveal",
+      "Lottie React",
+      "Firebase",
+    ],
     liveLink: "https://econest-client.netlify.app/",
     githubLink: "https://github.com/Mahedul-Karim/econest-client",
   },

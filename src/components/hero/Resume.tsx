@@ -7,7 +7,7 @@ const educations = [
     degree: "Bachelor of Science in Physics",
     university: "National University",
     period: "2026",
-    cgpa:"NA"
+    cgpa:"3.21"
   },
   {
     degree: "Higher Secondary Certificate Examination",

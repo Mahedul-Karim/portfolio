@@ -21,12 +21,20 @@ const Banner = () => {
           </h1>
           <div className="max-w-[450px]">
             <FlipText className="text-base sm:text-lg">
-              A passionate fullstack web developer who loves create exceptional
-              web solutions
+              An enthusiastic fullstack web developer who loves to create
+              exceptional web solutions
             </FlipText>
           </div>
           <div className="mt-4">
-            <Button className="glare-hover rounded-full hover:bg-primary">
+            <Button
+              className="glare-hover rounded-full hover:bg-primary"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/resume.pdf";
+                link.download = "Mahedul-Karim-Resume.pdf";
+                link.click();
+              }}
+            >
               <Download /> Download Resume
             </Button>
           </div>

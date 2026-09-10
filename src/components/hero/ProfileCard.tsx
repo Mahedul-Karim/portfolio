@@ -5,9 +5,9 @@ const ProfileCard = () => {
     <Card className="bg-transparent shadow-none gap-2 border-border rounded-full h-max max-w-[320px] mx-auto">
       <CardHeader className="items-center justify-center px-8">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+          src="/formal_image.png"
           alt=""
-          className="w-full aspect-square object-cover rounded-full"
+          className="w-full aspect-square object-contain rounded-full bg-white"
         />
       </CardHeader>
     </Card>

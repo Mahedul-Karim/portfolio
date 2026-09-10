@@ -8,7 +8,7 @@ const AboutMe = () => {
       <SectionTitle text="About Me" highlight="Me" />
       <div className="bg-glass border border-border rounded-2xl p-4 mt-4">
         <FlipText>
-          I&apos;m Mahedul Karim, a passionate full stack developer focused on
+          I&apos;m Mahedul Karim, a proactive and enthusiastic full stack developer focused on
           crafting modern, performative and responsive web applications. I
           specialize in latest web technologies like HTML, CSS, JavaScript,
           React, Next JS, Typescript, MongoDB, Express JS, Tailwind CSS etc. I
